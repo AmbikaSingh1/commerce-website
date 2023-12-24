@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" href="images.png/css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <!--main header-->
+        <header class="main-header">
+           <!---logo-holder-->
+           <div class="logo-holder">
+            <a href="#"><img src="images.png/google.jpg" alt="cool business">
+            </a>
+           </div>
+           <!-  -logo-holder-->
+           <!--search-holder-->
+           <div class="search-holder">
+            <form action="" method="get">
+                <input type="search" placeholder="search for.....">
+                <button type="submit">SUBMIT</button>
+            </form>
+           </div>
+               <!--search-holder-->
+        </header>
+        <div>
+            <!--mobile-menu-->
+            <nav class="main-menu">
+                <ul class="mobile-menu">
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#" class="toggle" onclick="myfun">+</a></li>
+                </ul>
+            </nav>
+            <!--mobile-menu-->
+            <!--main-menu-->
+            <nav class="main-menu">
+                <ul class="lapmenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a>
+                        <ul class="drop">
+                            <li><a href="#">Service-1</a></li>
+                            <li><a href="#">Service-2</a></li>
+                            <li><a href="#">Service-3</a></li>
+                        </ul>
+                    </li>    
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html  ">About</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>   
+        <!--main-menu-->
+        <!--banner-slider-->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images.png/img_mountains_wide.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images.png/img_nature_wide.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images.png/img_snow_wide.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+        <!--banner-slider-->
+        <!--content-holder-->
+        <section class="content-holder">
+            <main class="content">
+                <h1>MAIN heading</h1>
+                <h2>sub heading</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, maxime! Optio fugit voluptatum cum, architecto nobis modi obcaecati molestias quia. Vel pariatur excepturi provident! Id a quam ad quia reprehenderit!</p>
+                <p>Officiis, accusantium repellendus, molestias ipsum excepturi pariatur, aliquid id laboriosam consequuntur maxime non vero. Quos, placeat adipisci mollitia numquam, fugit quasi, tempora nostrum quod laborum exercitationem ad minima dolore! Doloribus.</p>
+            </main>
+            <aside class="sidebar">
+                <div class="widget">
+                    <h1>follow us</h1>
+                    <ul>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Linkedin</a></li>                        
+                    </ul>
+                </div>
+            </aside>    
+        
+        </section> 
+        <!--content-holder-->
+        <!--footer-widget-->
+        <section class="footer-widget-holder">
+            <div class="footer-widget">
+                <a href="#"><img  src="images.png/google.jpg" alt="cool business"></a>
+                <h3>Address</h3>
+                <address>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla beatae praesentium accusamus vitae possimus harum ab earum odit, aliquam labore veritatis neque dolore voluptatem architecto est quam soluta optio.</p>
+                </address>
+
+            </div>
+            <div class="footer-widget">
+                <h4>sitemap</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>   
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                        
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h4>sitemap</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contacts</a></li>
+                        
+                </ul>
+            </div>
+        </section>
+        <!--footer-widget-->
+        <footer class="side-footer">
+            <!--side-footer-->
+            <p><small>Copyright &copy;2025</small></p>
+            <p><small>ambikasingh &copy;2025</small></p>
+        </footer>
+            <!--site-footer-->
+              
+    </div>
+   
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+        
+</body>
+</html>
